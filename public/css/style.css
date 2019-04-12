@@ -127,6 +127,15 @@ i {
     -webkit-transform: rotate(45deg);
 }
 
+.height-10{
+    max-height: 50px;
+}
+
+.thumbnail{
+    max-height: 25px;
+    max-width: 25px;
+}
+
 @media(min-width:770px) {
     .carousel-text {
         margin-top: 20px;

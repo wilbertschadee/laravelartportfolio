@@ -13,9 +13,11 @@ class adminController extends Controller
         $this->middleware('auth');
     }   
 
-    public function index(){
-
-        return view('admin.index');
+    public function index()
+    {
+        $homepage = \App\homePage::all();
+        $projects = \App\project::all();
+        return view('admin.index',compact('homepage','projects'));
     }
 
     public function store(){
@@ -35,5 +37,10 @@ class adminController extends Controller
     public function create(){
 
         return view('admin.create');
+    }
+
+    public function edit($id){
+
+        return view('admin.edit');
     }
 }

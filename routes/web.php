@@ -17,13 +17,8 @@ Route::get('/year/{year}', 'pagesController@show');
 Route::get('/admin', 'adminController@index');
 Route::post('/admin', 'adminController@store');
 Route::get('/admin/create', 'adminController@create');
+Route::get('/admin/{id}/edit', 'adminController@edit');
 
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

@@ -4,7 +4,11 @@
 
 @section('content')
 
-    <h3 class="text-center text-muted"></h3>
+    <h3 class="text-center text-muted">@foreach($projects as $project)   
+    @if ($loop->first)
+   {{$project->year}} 
+   @endif 
+   @endforeach</h3>
 
     <div class="w-100 p-0 m-0 mh-100">
         <div class="row no-gutter">
