@@ -8,9 +8,9 @@ class pagesController extends Controller
 {
     public function index(){
 
-        $projects = \App\project::all();
+        $homepage = \App\homePage::all();
 
-        return view('index', compact('projects'));
+        return view('index', compact('homepage'));
     }
 
     public function show($year){
