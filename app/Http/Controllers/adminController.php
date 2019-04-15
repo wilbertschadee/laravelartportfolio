@@ -20,27 +20,4 @@ class adminController extends Controller
         return view('admin.index',compact('homepage','projects'));
     }
 
-    public function store(){
-        
-        $project = new project();
-
-        $project->title = request('title');
-        $project->description = request('description');
-        $project->img_path = request('img_path');
-        $project->year = request('year');
-
-        $project->save();
-
-        return redirect('/admin');
-    }
-
-    public function create(){
-
-        return view('admin.create');
-    }
-
-    public function edit($id){
-
-        return view('admin.edit');
-    }
 }

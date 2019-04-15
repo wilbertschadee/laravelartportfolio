@@ -13,7 +13,7 @@
             <th><img class="fit-img thumbnail" src="{{$project->img_path}}" alt=""></th>
             <th>{{$project->title}}</th>
             <th>{{$project->year}}</th>
-            <th><a href="admin/{{$project->id}}/edit">edit</a></th>
+            <th><a href="admin/project/{{$project->id}}/edit">edit</a></th>
             <th><a href="">delete</a></th>
         </tr>
     @endforeach
@@ -22,7 +22,7 @@
             <th></th>
             <th></th>
             <th></th>
-            <th><a href="/admin/create">maak project</a></th>
+            <th><a href="/admin/project/create">maak project</a></th>
         </tr>
     </table>
 
@@ -34,7 +34,7 @@
             <th><img class="fit-img thumbnail" src="{{$year->img_path_1}}" alt=""></th>
             <th><img class="fit-img thumbnail" src="{{$year->img_path_2}}" alt=""></th>
             <th><img class="fit-img thumbnail" src="{{$year->img_path_3}}" alt=""></th>
-            <th><a href="admin/{{$project->id}}/edit">edit</a></th>
+            <th><a href="admin/project/{{$project->id}}/edit">edit</a></th>
         </tr>
     @endforeach
         <tr>

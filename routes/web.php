@@ -15,9 +15,10 @@ Route::get('/', 'pagesController@index');
 Route::get('/year/{year}', 'pagesController@show');
 
 Route::get('/admin', 'adminController@index');
-Route::post('/admin', 'adminController@store');
-Route::get('/admin/create', 'adminController@create');
-Route::get('/admin/{id}/edit', 'adminController@edit');
+Route::post('/admin/project', 'adminController@store');
+Route::get('/admin/project/create', 'projectController@create');
+Route::get('/admin/project/{id}/edit', 'projectController@edit');
+Route::Patch('/admin/project/{id}', 'projectController@update');
 
 
 Auth::routes();

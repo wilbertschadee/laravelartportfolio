@@ -6,7 +6,7 @@
 
 <h1>een nieuw project toevoegen</h1>
 
-<form method="POST" action="/admin">
+<form method="POST" action="/admin/project">
     {{ csrf_field() }}
     <div>
         <input type="text" name="title" placeholder="naam van het project">
