@@ -45,4 +45,11 @@ class projectController extends Controller
 
         return redirect('/admin');
     }
+
+    public function delete($id){
+
+        \App\project::find($id)->delete();
+
+        return redirect('/admin');
+    }
 }

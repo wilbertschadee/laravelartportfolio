@@ -136,6 +136,14 @@ i {
     max-width: 25px;
 }
 
+.remove_button_css { 
+    outline: none;
+    padding: 5px; 
+    border: 0px; 
+    box-sizing: none; 
+    background-color: transparent; 
+}
+
 @media(min-width:770px) {
     .carousel-text {
         margin-top: 20px;

@@ -1,3 +1,8 @@
+window.onload = function() {
+  carouselNormalization();
+}
+
+
 function carouselNormalization() {
     var items = $('#carouselExampleIndicators .carousel-item'), //grab all slides
       heights = [], //create empty array to store height values

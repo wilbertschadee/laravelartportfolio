@@ -24,7 +24,9 @@
     </a>
 @endforeach
 
-    <button onclick="topFunction()" id="buttonTop" title="Go to top"><i class="arrow up"></i></button> 
+    <button onclick="topFunction()" id="buttonTop" title="Go to top"><i class="arrow up"></i></button>
+    
+    <script src="js/backToTop.js"></script>
 
 @endsection
     

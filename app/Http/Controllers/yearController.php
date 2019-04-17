@@ -11,9 +11,9 @@ class yearController extends Controller
         $year = new homePage();
 
         $year->year = request('year');
-        $year->img_1 = request('description');
-        $year->img_2 = request('img_path');
-        $year->img_3 = request('year');
+        $year->img_1 = request('img_1');
+        $year->img_2 = request('img_2');
+        $year->img_3 = request('img_3');
 
         $year->save();
 
@@ -22,26 +22,29 @@ class yearController extends Controller
 
     public function create(){
 
-        return view('admin.create');
+        $projects=\App\project::all();
+
+        return view('admin.year.create', compact('projects'));
     }
 
-    public function edit($id){
+    public function edit($year){
 
-        $project=\App\project::find($id);
+        $years=\App\homePage::where('year', $year)->get();      
+        $projects = \App\project::where('year', $year)->get();
 
-        return view('admin.edit', compact('project'));
+        return view('admin.year.edit', compact('years'),compact('projects'));
     }
 
-    public function update($id){
+    public function update($year){
 
-        $project=\App\project::find($id);
+        $year=\App\homePage::where('year', $year)->get();
 
-        $project->title = request('title');
-        $project->description = request('description');
-        $project->img_path = request('img_path');
-        $project->year = request('year');
+        $year->year = request('year');
+        $year->img_1 = request('img_1');
+        $year->img_2 = request('img_2');
+        $year->img_3 = request('img_3');
 
-        $project->save();
+        $year->save();
 
         return redirect('/admin');
     }

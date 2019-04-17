@@ -51,5 +51,5 @@
         </div>
     </div>
 
-
+    <script src="/js/height.js"></script>
 @endsection
