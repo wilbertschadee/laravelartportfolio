@@ -19,4 +19,9 @@ class pagesController extends Controller
 
         return view('year', compact('projects'));
     }
+
+    public function contact(){
+
+        return view('contact');
+    }
 }

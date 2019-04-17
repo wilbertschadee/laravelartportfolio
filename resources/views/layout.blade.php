@@ -20,7 +20,7 @@
                         <div class="navbar-nav w-100 d-flex justify-content-around">
                             <a href="/" class="nav-item nav-link link-black text-dark">PORTFOLIO</a>
                             <a href="" class="nav-item nav-link link-black text-dark">PERSONAL</a>
-                            <a href="contact.html" class="nav-item nav-link link-black text-dark">CONTACT ME</a>
+                            <a href="/contact" class="nav-item nav-link link-black text-dark">CONTACT ME</a>
                         </div>
                     </div>
                 </nav>
