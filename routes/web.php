@@ -14,6 +14,7 @@
 Route::get('/', 'pagesController@index');
 Route::get('/year/{year}', 'pagesController@show');
 Route::get('/contact', 'pagesController@contact');
+Route::get('/personal', 'pagesController@personal');
 
 Route::get('/admin', 'adminController@index');
 

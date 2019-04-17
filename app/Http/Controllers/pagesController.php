@@ -24,4 +24,9 @@ class pagesController extends Controller
 
         return view('contact');
     }
+
+    public function personal(){
+
+        return view('personal');
+    }
 }
