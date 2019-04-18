@@ -150,6 +150,11 @@ i {
     border-radius: 100px
 }
 
+.img-thumbnail{
+    width:200px;
+    height: 200px;;
+}
+
 @media(min-width:770px) {
     .carousel-text {
         margin-top: 20px;

@@ -14,40 +14,40 @@
     {{method_field('PATCH')}}
     {{ csrf_field() }}
     
-    <div>
+    <div class="form-group">
     <label for="year">jaar</label>
-        <input type="text" name="year" placeholder="jaar" value='{{$years[0]->year}}'>
+        <input type="text" class="form-control" name="year" placeholder="jaar" value='{{$years[0]->year}}'>
     </div>
     <div>
         <label for="img_1">linkerafbeelding</label>
         @foreach($projects as $project)
-        <div class="">
-            <input type="checkbox" name="img_1" valeu="{{$project->img_path}}"/>
-            <img class='fit-img thumbnail' src="{{$project->img_path}}"/>
+        <div class="form-group">
+            <input type="checkbox" class="form-check-input" name="img_1" valeu="{{$project->img_path}}"/>
+            <img class='fit-img thumbnail' src="\img/{{$project->img_path}}"/>
         </div>
         @endforeach
         
     </div>
-    <div>
+    <div class="form-group">
         <label for="img_2">middelse afbeelding</label>
     @foreach($projects as $project)
         <div>
-            <input type="checkbox" name="img_2" valeu="{{$project->img_path}}"/>
-            <img class='fit-img thumbnail' src="{{$project->img_path}}"/>
+            <input type="checkbox" class="form-check-input" name="img_2" valeu="{{$project->img_path}}"/>
+            <img class='fit-img thumbnail' src="\img/{{$project->img_path}}"/>
         </div>
         @endforeach
     </div>
     <div>
         <label for="img_3">rechter afbeelding</label>
     @foreach($projects as $project)
-        <div class="">
-            <input type="checkbox" name="img_3" valeu="{{$project->img_path}}"/>
-            <img class='fit-img thumbnail' src="{{$project->img_path}}"/>
+        <div class="form-group">
+            <input type="checkbox" class="form-check-input" name="img_3" valeu="{{$project->img_path}}"/>
+            <img class='fit-img thumbnail' src="\img/{{$project->img_path}}"/>
         </div>
         @endforeach
     </div>
     <div>
-        <button type="submit">project aanpassen</button>
+        <button type="submit" class="btn btn-primary">project aanpassen</button>
     </div>
 </form>
 
