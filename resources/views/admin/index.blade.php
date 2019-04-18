@@ -10,7 +10,7 @@
     <table class="table table-striped">
     @foreach($projects as $project)
         <tr class=height-10>
-            <th><img class="fit-img thumbnail" src="{{$project->img_path}}" alt=""></th>
+            <th><img class="fit-img thumbnail" src="\img/{{$project->img_path}}" alt=""></th>
             <th>{{$project->title}}</th>
             <th>{{$project->year}}</th>
             <th><a href="\admin/project/{{$project->id}}/edit">edit</a></th>

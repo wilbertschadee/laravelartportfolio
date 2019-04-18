@@ -6,7 +6,7 @@
 
 <h1>een nieuw project toevoegen</h1>
 
-<form method="POST" action="/admin/project">
+<form method="POST" action="/admin/project" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div>
         <input type="text" name="title" placeholder="naam van het project">
@@ -14,8 +14,11 @@
     <div>
         <textarea name="description" placeholder="beschrijving project"></textarea>
     </div>
-    <div>
-        <input type="text" name="img_path" placeholder='image path'>
+    <div class="form-group">
+        <label for="img_path">File input</label>
+        <input data-preview="#preview" name="img_path" type="file" id="imageInput">
+        <img class="col-sm-6" id="preview"  src="">
+        <p class="help-block">Example block-level help text here.</p>
     </div>
     <div>
         <input type="text" name="year" placeholder="jaar">

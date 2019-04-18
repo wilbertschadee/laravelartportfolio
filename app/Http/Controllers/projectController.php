@@ -12,16 +12,29 @@ class projectController extends Controller
         $this->middleware('auth');
     }  
     
-    public function store(){
+    public function store(Request $request){
+
+        request()->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'year' => 'required',
+        ]);
         
-        $project = new project();
+        $img = $request->file('img_path');
+        // $extension = $img->getClientOriginalExtension();
+        // \Storage::disk('public')->put($img->getFilename().'.'.$extension,  \File::get($img));
+        $img->move('img', $img->getClientOriginalName());
 
-        $project->title = request('title');
-        $project->description = request('description');
-        $project->img_path = request('img_path');
-        $project->year = request('year');
 
+        $project = new \App\project();
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->year = $request->year;
+        // $project->mime = $img->getClientMimeType();
+        $project->img_path = $img->getClientOriginalName();
+        // $project->img_path = $img->getFilename().'.'.$extension;
         $project->save();
+
 
         return redirect('/admin');
     }
